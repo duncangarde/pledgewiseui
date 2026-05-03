@@ -17,6 +17,6 @@ export default defineCliConfig({
     overloadClientMethods: true,
   },
   deployment: {
-    appId,
+    appId: appId || "c780ax88xw60eug7qay6c5y1",
   },
 });

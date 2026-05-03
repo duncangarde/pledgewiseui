@@ -29,6 +29,7 @@ yarn-error.log*
 .env*.local
 .env
 studio/.env
+studio/sample-data.tar.gz
 
 # vercel
 .vercel

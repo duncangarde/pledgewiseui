@@ -5,10 +5,13 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 const isProduction = process.env.NEXT_PUBLIC_SITE_ENV === "production";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
   title: {
     template: "%s | Schema UI",
     default: "Sanity Next.js Website | Schema UI",
@@ -16,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-image.jpg`,
+        url: siteUrl ? `${siteUrl}/images/og-image.jpg` : "",
         width: 1200,
         height: 630,
       },

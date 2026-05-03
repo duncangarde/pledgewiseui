@@ -2,6 +2,9 @@ import { MetadataRoute } from "next";
 import { groq } from "next-sanity";
 import { sanityFetch } from "@/sanity/lib/live";
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
 const VIEWABLE_TYPES = ["page", "post"] as const;
 
 const urlQuery = `
@@ -36,7 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { data } = await sanityFetch({
     query: SITEMAP_QUERY,
     params: {
-      baseUrl: process.env.NEXT_PUBLIC_SITE_URL!,
+      baseUrl,
       viewableTypes: [...VIEWABLE_TYPES],
     },
   });

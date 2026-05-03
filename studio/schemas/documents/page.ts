@@ -52,6 +52,7 @@ export default defineType({
         { type: "logo-cloud-1" },
         { type: "faqs" },
         { type: "form-newsletter" },
+        { type: "tally" },
         { type: "all-posts" },
       ],
       options: {
@@ -97,16 +98,16 @@ export default defineType({
               title: "CTA",
               of: ["cta-1"],
             },
+{
+               name: "faqs",
+               title: "FAQs",
+               of: ["faqs"],
+             },
             {
-              name: "faqs",
-              title: "FAQs",
-              of: ["faqs"],
-            },
-            {
-              name: "forms",
-              title: "Forms",
-              of: ["form-newsletter"],
-            },
+               name: "forms",
+               title: "Forms",
+               of: ["form-newsletter", "tally"],
+             },
             {
               name: "all-posts",
               title: "All Posts",

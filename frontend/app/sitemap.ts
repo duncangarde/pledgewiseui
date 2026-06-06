@@ -44,5 +44,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   });
 
-  return data || [];
+  return (data as MetadataRoute.Sitemap) || [];
 }

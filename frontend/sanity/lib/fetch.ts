@@ -27,7 +27,7 @@ export const fetchSanityPageBySlug = async ({
     params: { slug },
   });
 
-  return data;
+  return data as PAGE_QUERY_RESULT;
 };
 
 export const fetchSanityPagesStaticParams =
@@ -38,7 +38,7 @@ export const fetchSanityPagesStaticParams =
       stega: false,
     });
 
-    return data;
+    return data as PAGES_SLUGS_QUERY_RESULT;
   };
 
 export const fetchSanityPosts = async (): Promise<POSTS_QUERY_RESULT> => {
@@ -46,7 +46,7 @@ export const fetchSanityPosts = async (): Promise<POSTS_QUERY_RESULT> => {
     query: POSTS_QUERY,
   });
 
-  return data;
+  return data as POSTS_QUERY_RESULT;
 };
 
 export const fetchSanityPostBySlug = async ({
@@ -59,7 +59,7 @@ export const fetchSanityPostBySlug = async ({
     params: { slug },
   });
 
-  return data;
+  return data as POST_QUERY_RESULT;
 };
 
 export const fetchSanityPostsStaticParams =
@@ -70,7 +70,7 @@ export const fetchSanityPostsStaticParams =
       stega: false,
     });
 
-    return data;
+    return data as POSTS_SLUGS_QUERY_RESULT;
   };
 
 export const fetchSanityNavigation =
@@ -79,7 +79,7 @@ export const fetchSanityNavigation =
       query: NAVIGATION_QUERY,
     });
 
-    return data;
+    return data as NAVIGATION_QUERY_RESULT;
   };
 
 export const fetchSanitySettings = async (): Promise<SETTINGS_QUERY_RESULT> => {
@@ -87,5 +87,5 @@ export const fetchSanitySettings = async (): Promise<SETTINGS_QUERY_RESULT> => {
     query: SETTINGS_QUERY,
   });
 
-  return data;
+  return data as SETTINGS_QUERY_RESULT;
 };

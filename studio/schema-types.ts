@@ -38,6 +38,7 @@ import logoCloud1 from "./schemas/blocks/logo-cloud/logo-cloud-1";
 import faqs from "./schemas/blocks/faqs";
 import newsletter from "./schemas/blocks/forms/newsletter";
 import tally from "./schemas/blocks/forms/tally";
+import youtube from "./schemas/blocks/youtube/youtube";
 import allPosts from "./schemas/blocks/all-posts";
 
 export const schemaTypes = [
@@ -80,5 +81,6 @@ export const schemaTypes = [
   faqs,
   newsletter,
   tally,
+  youtube,
   allPosts,
 ];

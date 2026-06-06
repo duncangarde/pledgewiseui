@@ -53,6 +53,7 @@ export default defineType({
         { type: "faqs" },
         { type: "form-newsletter" },
         { type: "tally" },
+        { type: "youtube" },
         { type: "all-posts" },
       ],
       options: {
@@ -108,6 +109,11 @@ export default defineType({
                title: "Forms",
                of: ["form-newsletter", "tally"],
              },
+            {
+              name: "media",
+              title: "Media",
+              of: ["youtube"],
+            },
             {
               name: "all-posts",
               title: "All Posts",

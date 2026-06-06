@@ -13,6 +13,7 @@ import { logoCloud1Query } from "./logo-cloud/logo-cloud-1";
 import { faqsQuery } from "./faqs";
 import { formNewsletterQuery } from "./forms/newsletter";
 import { tallyQuery } from "./forms/tally";
+import { youtubeQuery } from "./youtube/youtube";
 import { allPostsQuery } from "./all-posts";
 
 export const PAGE_QUERY = groq`
@@ -31,6 +32,7 @@ export const PAGE_QUERY = groq`
       ${faqsQuery},
       ${formNewsletterQuery},
       ${tallyQuery},
+      ${youtubeQuery},
       ${allPostsQuery},
     },
     ${metaQuery},

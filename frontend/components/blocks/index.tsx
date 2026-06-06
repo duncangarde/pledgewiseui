@@ -12,6 +12,7 @@ import LogoCloud1 from "@/components/blocks/logo-cloud/logo-cloud-1";
 import FAQs from "@/components/blocks/faqs";
 import FormNewsletter from "@/components/blocks/forms/newsletter";
 import Tally from "@/components/blocks/forms/tally";
+import YouTube from "@/components/blocks/youtube/youtube";
 import AllPosts from "@/components/blocks/all-posts";
 
 type Block = NonNullable<NonNullable<PAGE_QUERY_RESULT>["blocks"]>[number];
@@ -32,6 +33,7 @@ const componentMap: {
   faqs: FAQs,
   "form-newsletter": FormNewsletter,
   tally: Tally,
+  youtube: YouTube,
   "all-posts": AllPosts,
 };
 

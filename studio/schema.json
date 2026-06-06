@@ -171,6 +171,66 @@
     }
   },
   {
+    "name": "youtube",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "youtube"
+          }
+        },
+        "padding": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "section-padding"
+          },
+          "optional": true
+        },
+        "colorVariant": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "inline",
+            "name": "color-variant"
+          },
+          "optional": true
+        },
+        "videoId": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "label": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "caption": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "autoplay": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "boolean"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
     "name": "tally",
     "type": "type",
     "value": {
@@ -3252,6 +3312,21 @@
                 "rest": {
                   "type": "inline",
                   "name": "tally"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "youtube"
                 }
               },
               {
